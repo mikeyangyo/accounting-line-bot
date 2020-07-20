@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>檢視紀錄</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/css/fontawesome-free/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../static/css/datatables-bs4/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../static/css/datatables-responsive/responsive.bootstrap4.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="../static/css/daterangepicker/daterangepicker.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/css/adminlte/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-body">
+            <!-- Date range -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>依日期搜尋:</label>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="far fa-calendar-alt"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control float-right" id="filter_date">
+                            <input type="hidden" class="form-control float-right" id="filter_start_date">
+                            <input type="hidden" class="form-control float-right" id="filter_end_date">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                </div>
+            </div>
+            <table id="datatable" name="records" class="table table-bordered table-striped display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>記帳日期</th>
+                        <th>種類</th>
+                        <th>敘述</th>
+                        <th>金額</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../static/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- jquery-validation -->
+    <script src="../static/js/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../static/js/jquery-validation/additional-methods.min.js"></script>
+    <!-- bs-custom-file-input -->
+    <script src="../static/js/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- DataTables -->
+    <script src="../static/js/datatables/jquery.dataTables.min.js"></script>
+    <script src="../static/js/datatable-bs4//dataTables.bootstrap4.min.js"></script>
+    <script src="../static/js/datatables-responsive/dataTables.responsive.min.js"></script>
+    <script src="../static/js/datatables-responsive/responsive.bootstrap4.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../static/js/moment/moment.min.js"></script>
+    <script src="../static/js/daterangepicker/daterangepicker.js"></script>
+    <!-- form validation -->
+    <script src="../static/js/form_validation.js"></script>
+    <!-- date-range-picker -->
+    <script src="../static/js/date-range-filter-initialization.js"></script>
+    <!-- datatable -->
+    <script src="../static/js/datatables.js"></script>
+
+</body>
+
+</html>
