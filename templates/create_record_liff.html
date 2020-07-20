@@ -73,6 +73,7 @@
                     liffId: myLiffId,
                 })
                 .then(() => {
+                    console.log('liff initialization success');
                     setFormHandler();
                 })
                 .catch(err => {
@@ -101,13 +102,18 @@
                             }
                         ])
                         .then(() => {
+                            console.log('send message success');
                             liff.closeWindow();
                         })
                         .catch(err => {
+                            console.log('send message fail', err);
                             window.alert('發送訊息失敗: ' + err);
                         })
                 })
-                .catch(error => alert(`記帳失敗, ${error}`));
+                .catch(error => {
+                    console.log('request create record api fail', error);
+                    alert(`記帳失敗, ${error}`);
+                });
         }
         function setFormHandler() {
             let form = $('#create_record_form');
@@ -129,7 +135,9 @@
             };
 
             $.ajax(settings)
-                .done(function (response) { })
+                .done(function (response) {
+                    console.log('get create record liff id success');
+                })
                 .then(jsonResponse => {
                     let myLiffId = jsonResponse.id;
                     initializeLiff(myLiffId);
